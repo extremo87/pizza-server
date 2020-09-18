@@ -98,6 +98,8 @@
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hfOixtmgE6vDhyYKg1VPy8owAn" />
@@ -134,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600398810676</updated>
-      <workItem from="1600398811756" duration="7368000" />
+      <workItem from="1600398811756" duration="8266000" />
     </task>
     <servers />
   </component>
