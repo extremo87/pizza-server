@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/products', 'ProductController@index')->name('products');
+Route::get('/currencies', 'CurrencyController@index')->name('currencies');

@@ -15,7 +15,7 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert([
             [
                 'title' => 'MARGHERITA',
-                'short_description' => 'Tomatoes, mozzarella',
+                'ingredients' => 'Tomatoes, mozzarella',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza1.jpg',
                 'price' => 18.00,
@@ -24,7 +24,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'QUATTRO FROMAGGI',
-                'short_description' => 'Gorgonzola, ricotta, mozzarella, taleggio',
+                'ingredients' => 'Gorgonzola, ricotta, mozzarella, taleggio',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza2.jpg',
                 'price' => 24.00,
@@ -33,7 +33,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'SALMONE E PESTO DI NOCI',
-                'short_description' => 'Salmon, walnut pesto',
+                'ingredients' => 'Salmon, walnut pesto',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza3.jpg',
                 'price' => 26.00,
@@ -42,7 +42,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'POMODORI PANCETTA',
-                'short_description' => 'Tomatoes, bacon, onion',
+                'ingredients' => 'Tomatoes, bacon, onion',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza4.jpg',
                 'price' => 22.00,
@@ -51,7 +51,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'CHEESY GARLIC PIZZA',
-                'short_description' => 'Mozzarella, & garlic sauce on a crème fraiche base, ect',
+                'ingredients' => 'Mozzarella, & garlic sauce on a crème fraiche base, ect',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza1.jpg',
                 'price' => 28.00,
@@ -60,7 +60,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'CHEESY GARLIC PIZZA',
-                'short_description' => 'Lots of pepperoni & mozzarella',
+                'ingredients' => 'Lots of pepperoni & mozzarella',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza2.jpg',
                 'price' => 17.00,
@@ -69,7 +69,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'GRAND SUPREME',
-                'short_description' => 'Baby spinach, smoked leg ham, olives, mozzarella, ect',
+                'ingredients' => 'Baby spinach, smoked leg ham, olives, mozzarella, ect',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza3.jpg',
                 'price' => 15.00,
@@ -78,7 +78,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'PACHINO PICCANTE',
-                'short_description' => 'Marinated cherry tomatoes',
+                'ingredients' => 'Marinated cherry tomatoes',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
                 'image' => 'https://static.nnc.kz/pizza4.jpg',
                 'price' => 15.00,

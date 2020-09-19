@@ -18,9 +18,9 @@ class CreateOrdersTable extends Migration
             $table->string('address');
             $table->float('total');
             $table->string('phone')->index();
-            $table->string('full_name');
+            $table->string('fullname');
             $table->string('status')->index();
-            $table->string('payment_type')->index();
+            $table->string('payment')->index();
             $table->timestamps();
         });
     }
