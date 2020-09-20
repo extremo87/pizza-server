@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d29dfe7-7350-4fbf-8381-0a7c069932cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/OrderItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/ValidationServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/pizza.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_18_033228_create_order_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_18_033228_create_order_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600398810676</updated>
       <workItem from="1600398811756" duration="9417000" />
-      <workItem from="1600516545929" duration="15432000" />
+      <workItem from="1600516545929" duration="15634000" />
     </task>
     <servers />
   </component>
