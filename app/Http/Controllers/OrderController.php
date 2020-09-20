@@ -18,9 +18,11 @@ class OrderController extends Controller
         try {
             $order = Order::createOrder($request->all());
         } catch (\Exception $exception) {
-            return response($exception->getMessage(), 500);
+            return response([
+                'message' => $exception->getMessage()
+            ], 500);
         }
 
-        return response($order, 201);
+        return response(['data' => $order], 201);
     }
 }

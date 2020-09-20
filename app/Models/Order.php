@@ -49,9 +49,11 @@ class Order extends Model
             $order = self::create(self::prepareOrderToDB($data));
             $order->items()->createMany(self::prepareOrderItemsToDB($order, $data['cart']));
 
-            // Save order items
             DB::commit();
+            $order->items;
+
             return $order;
+
         } catch (\Exception $e) {
             return $e;
             DB::rollBack();
