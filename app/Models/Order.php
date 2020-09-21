@@ -27,12 +27,11 @@ class Order extends Model
     }
 
 
-
     public static function rules() {
        return [
             'firstName' => 'required|max:255|min:2',
-            'lastName' => 'required|max:255|min:2',
-            'address' => 'required|max:255|min:2',
+            'lastName' => 'required|max:255|min:3',
+            'address' => 'required|max:255|min:10',
             'phone' => 'required|max:18|min:18',
             'deliveryFee' => 'required|numeric',
             'currency' => ['required', Rule::in(config('pizza.currencies'))],

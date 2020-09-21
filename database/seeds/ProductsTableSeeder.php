@@ -15,8 +15,8 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert([
             [
                 'title' => 'MARGHERITA',
-                'ingredients' => 'Tomatoes, mozzarella',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'ingredients' => 'Tomatoes, mozzarella, ricotta, bacon, onion',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza1.jpg',
                 'price' => 18.00,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -25,7 +25,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'title' => 'QUATTRO FROMAGGI',
                 'ingredients' => 'Gorgonzola, ricotta, mozzarella, taleggio',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza2.jpg',
                 'price' => 24.00,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -33,8 +33,8 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'SALMONE E PESTO DI NOCI',
-                'ingredients' => 'Salmon, walnut pesto',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'ingredients' => 'Salmon, walnut pesto, onion, garlic sauce',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza3.jpg',
                 'price' => 26.00,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -42,8 +42,8 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'POMODORI PANCETTA',
-                'ingredients' => 'Tomatoes, bacon, onion',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'ingredients' => 'Tomatoes, bacon, onion, garlic sauce',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza4.jpg',
                 'price' => 22.00,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -52,7 +52,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'title' => 'CHEESY GARLIC PIZZA',
                 'ingredients' => 'Mozzarella, & garlic sauce on a crème fraiche base, ect',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza1.jpg',
                 'price' => 28.00,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -60,8 +60,8 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'CHEESY GARLIC PIZZA',
-                'ingredients' => 'Lots of pepperoni & mozzarella',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'ingredients' => 'Lots of pepperoni & mozzarella, garlic sauce',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza2.jpg',
                 'price' => 17.00,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -70,7 +70,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'title' => 'GRAND SUPREME',
                 'ingredients' => 'Baby spinach, smoked leg ham, olives, mozzarella, ect',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza3.jpg',
                 'price' => 15.00,
                 'created_at' => date('Y-m-d H:i:s'),
@@ -78,8 +78,8 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'title' => 'PACHINO PICCANTE',
-                'ingredients' => 'Marinated cherry tomatoes',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit sed justo eu tempus.',
+                'ingredients' => 'Marinated cherry tomatoes, garlic sauce',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 'image' => 'https://static.nnc.kz/pizza4.jpg',
                 'price' => 15.00,
                 'created_at' => date('Y-m-d H:i:s'),
