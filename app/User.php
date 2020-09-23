@@ -5,8 +5,10 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'firstname', 'lastname', 'phone'
     ];
 
     /**
@@ -36,4 +38,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
+
+    public static function rules() {
+        return [
+            'firstName' => 'bail|required|string|max:255',
+            'lastName' => 'bail|required|string|max:255',
+            'email' => 'bail|required|string|email|max:255|unique:users',
+            'password' => 'bail|required|string|min:6|confirmed',
+            'phone' => 'bail|required|max:18|min:18|unique:users',
+        ];
+    }
 }

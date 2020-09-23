@@ -13,17 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 
 Route::get('/products', 'ProductController@index')->name('products');
 Route::get('/currencies', 'CurrencyController@index')->name('currencies');
-
+Route::post('/register', 'UserController@register');
+Route::post('/login', 'UserController@authenticate');
 
 Route::group(['middleware' => ['sanitize']], function () {
     Route::post('/orders', 'OrderController@create')->name('create');
+});
+
+Route::group(['middleware' => ['jwt']], function() {
+    Route::get('/user', 'UserController@getAuthenticatedUser');
 });
 
 
