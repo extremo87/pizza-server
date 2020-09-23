@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
@@ -40,13 +41,20 @@ class Order extends Model
         ];
     }
 
-    public static function createOrder($data) {
+    public static function createOrder($data, $user) {
 
         DB::beginTransaction();
 
         try {
             $order = self::create(self::prepareOrderToDB($data));
             $order->items()->createMany(self::prepareOrderItemsToDB($order, $data['cart']));
+
+            if ($user) {
+                UserOrderPivot::create([
+                    'order_id' => $order->id,
+                    'user_id' =>  $user->id
+                ]);
+            }
 
             DB::commit();
             $order->items;
@@ -100,6 +108,25 @@ class Order extends Model
         }
 
         return $totalProducts + $fee;
+    }
+
+    public static function getUserOrders(User $user) {
+
+        $orders = $user->orders;
+
+        $orderIds = $user->orders->pluck('id');
+
+        $products = DB::table('products')
+            ->join('order_items', 'product_id', '=','products.id')
+            ->whereIn('order_items.order_id', $orderIds )
+            ->get();
+
+        foreach ($orders as $key => $order) {
+            $orders[$key]->items = $products->where('order_id', $order->id);
+        }
+
+        return $orders;
+
     }
 
 

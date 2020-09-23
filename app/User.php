@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use App\Models\Order;
 
 
 class User extends Authenticatable implements JWTSubject
@@ -40,6 +41,13 @@ class User extends Authenticatable implements JWTSubject
         'phone_verified_at' => 'datetime',
     ];
 
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, 'users_orders', 'user_id', 'order_id');
+    }
+
+
     public function getJWTIdentifier()
     {
         return $this->getKey();
@@ -59,4 +67,5 @@ class User extends Authenticatable implements JWTSubject
             'phone' => 'bail|required|max:18|min:18|unique:users',
         ];
     }
+
 }

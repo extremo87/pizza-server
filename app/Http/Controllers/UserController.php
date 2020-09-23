@@ -60,24 +60,7 @@ class UserController extends Controller
 
     public function getAuthenticatedUser()
     {
-        try {
-
-            if (! $user = JWTAuth::parseToken()->authenticate()) {
-                return response(['message' => 'User not found'], 404);
-            }
-
-        } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
-
-            return response(['message' => 'Token expired'], $e->getStatusCode());
-
-        } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
-
-            return response(['message' => 'Token invalid'], $e->getStatusCode());
-
-        } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
-
-            return response(['message' => 'Token is missing'], $e->getStatusCode());
-        }
+        $user = auth()->user();
 
         return response(compact('user'));
     }

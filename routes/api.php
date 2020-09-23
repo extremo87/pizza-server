@@ -26,6 +26,7 @@ Route::group(['middleware' => ['sanitize']], function () {
 
 Route::group(['middleware' => ['jwt']], function() {
     Route::get('/user', 'UserController@getAuthenticatedUser');
+    Route::get('/orders', 'OrderController@get');
 });
 
 
