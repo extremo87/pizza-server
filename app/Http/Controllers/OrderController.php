@@ -33,6 +33,7 @@ class OrderController extends Controller
 
         try {
             $order = Order::createOrder($request->all(), $user);
+
         } catch (\Exception $exception) {
             return response(['message' => $exception->getMessage()], 500);
         }

@@ -18,6 +18,12 @@ class SanitizeMiddleware
     public function handle($request, Closure $next)
     {
 
+        if ($request->has('phone')) {
+            $request->request->add([
+                'phone' => trim(preg_replace("/\D/", "", $request->phone))
+            ]);
+        }
+
         foreach ($request->input() as $key => $value) {
             if (!is_array($value)) {
                 $request->request->set($key, trim(strip_tags($value)));

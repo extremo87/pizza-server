@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Events\UserRegistered;
+use App\Events\UserLoggedIn;
 
 class UserController extends Controller
 {
@@ -24,7 +25,12 @@ class UserController extends Controller
             return response(['message' => 'Could not create token'], 500);
         }
 
-        return response(compact('token'));
+        $user = auth()->user();
+
+        // In real life this event would fire after phone verification
+        event(new UserLoggedIn($user));
+
+        return response(compact('token', 'user'));
     }
 
     public function register(Request $request)

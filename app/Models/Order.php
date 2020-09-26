@@ -33,7 +33,7 @@ class Order extends Model
             'firstName' => 'required|max:255|min:2',
             'lastName' => 'required|max:255|min:3',
             'address' => 'required|max:255|min:10',
-            'phone' => 'required|max:18|min:18',
+            'phone' => 'required|max:11|min:11',
             'deliveryFee' => 'required|numeric',
             'currency' => ['required', Rule::in(config('pizza.currencies'))],
             'paymentMethod' => ['required', Rule::in(config('pizza.paymentMethods'))],
@@ -114,7 +114,7 @@ class Order extends Model
 
         $orders = $user->orders;
 
-        $orderIds = $user->orders->pluck('id');
+        $orderIds = $orders->pluck('id');
 
         $products = DB::table('products')
             ->join('order_items', 'product_id', '=','products.id')

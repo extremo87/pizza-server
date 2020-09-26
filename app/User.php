@@ -64,7 +64,7 @@ class User extends Authenticatable implements JWTSubject
             'lastName' => 'bail|required|string|max:255',
             'email' => 'bail|required|string|email|max:255|unique:users',
             'password' => 'bail|required|string|min:6|confirmed',
-            'phone' => 'bail|required|max:18|min:18|unique:users',
+            'phone' => 'bail|required|max:11|min:11|unique:users',
         ];
     }
 

@@ -15,6 +15,10 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\UserRegistered' => [
             'App\Listeners\BindPossibleOrders',
         ],
+
+        'App\Events\UserLoggedIn' => [
+            'App\Listeners\BindPossibleOrders',
+        ],
     ];
 
     /**

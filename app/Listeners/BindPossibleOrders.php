@@ -2,7 +2,6 @@
 
 namespace App\Listeners;
 
-use App\Events\UserRegistered;
 use Carbon\Carbon;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -25,10 +24,10 @@ class BindPossibleOrders
     /**
      * Handle the event.
      *
-     * @param  UserRegistered  $event
+     * @param  $event
      * @return void
      */
-    public function handle(UserRegistered $event)
+    public function handle($event)
     {
 
         $user = $event->user;
