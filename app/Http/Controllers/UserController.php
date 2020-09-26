@@ -44,7 +44,7 @@ class UserController extends Controller
             $phoneVerifiedAt = Carbon::now();
 
             $user = User::create([
-                'name' => "$request->get('lastName') $request->get('firstName')",
+                'name' => "{$request->get('firstName')} {$request->get('lastName')}",
                 'firstname' => $request->get('firstName'),
                 'lastname' => $request->get('lastName'),
                 'phone' => preg_replace("/\D/", "", $request->get('phone')),
